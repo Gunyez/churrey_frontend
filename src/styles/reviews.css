@@ -1,0 +1,29 @@
+.reviewsSection {
+  margin-top: 40px;
+}
+
+.reviewForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.stars {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.star {
+  color: gray;
+}
+
+.star.active {
+  color: gold;
+}
+
+.reviewCard {
+  background: #f9f9f9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}

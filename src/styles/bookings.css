@@ -1,0 +1,109 @@
+.mybookingsPage {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.mybookingsPage h2 {
+  margin-bottom: 20px;
+}
+
+/* CARD */
+.mybookingCard {
+  display: flex;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.mybookingCard:hover {
+  transform: translateY(-3px);
+}
+
+/* IMAGE */
+.mybookingCard img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* INFO */
+.mybookingInfo {
+  flex: 1;
+}
+
+.mybookingInfo h3 {
+  margin-bottom: 5px;
+}
+
+.mybookingInfo p {
+  margin: 4px 0;
+  color: #555;
+}
+.mybookingActions {
+  display: flex;
+  align-items: center;
+}
+/* BUTTON */
+.cancelBtn {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.cancelBtn:hover {
+  background: #d9363e;
+}
+
+/* ---------------- TABLET ---------------- */
+@media (max-width: 768px) {
+  .mymybookingCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mybookingCard img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .cancelBtn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 480px) {
+  .mybookingsPage {
+    padding: 10px;
+  }
+
+  .mybookingCard {
+    padding: 10px;
+  }
+
+  .mybookingInfo h3 {
+    font-size: 16px;
+  }
+
+  .mybookingInfo p {
+    font-size: 13px;
+  }
+
+  .cancelBtn {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

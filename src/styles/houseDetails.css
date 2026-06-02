@@ -1,0 +1,112 @@
+.detailsPage {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Layout */
+.detailsContainer {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Left side */
+.left {
+  flex: 2;
+}
+
+.left h1 {
+  margin-bottom: 10px;
+}
+
+.location {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.info {
+  margin-bottom: 15px;
+}
+
+.amenities {
+  list-style: none;
+  padding: 0;
+}
+
+.amenities li {
+  margin-bottom: 5px;
+}
+
+/* Right side */
+.right {
+  flex: 1;
+}
+
+/* Booking card */
+.bookingCard {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.bookingCard input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.bookBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.bookBtn:hover {
+  background: #333;
+}
+.dateBox {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+.dateBox:hover {
+  background: #eee;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .detailsContainer {
+    flex-direction: column;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

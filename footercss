@@ -1,0 +1,147 @@
+.footer{
+    background-color: #071833;
+    height: max-content;
+    color: white;
+    padding: 50px 100px 0px 90px;
+}
+
+.topFooter{
+    display: flex;
+    flex-direction: column;
+}
+
+.logoImg{
+    height: 30px;
+    width: 60px;
+}
+
+.logoText{
+    width: 35%;
+}
+
+.bottomFooter{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.linkFooter{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.linkTitle{
+    text-decoration: underline;
+}
+
+li{
+    cursor: pointer;
+}
+
+hr{
+    margin-top: 20px;
+}
+
+.copyRight{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.socialsLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+@media screen and (max-width: 992px) {
+
+    .footer{
+        padding: 40px 50px 0px 50px;
+    }
+
+    .logoText{
+        width: 60%;
+    }
+
+    .bottomFooter{
+        gap: 40px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media screen and (max-width: 768px) {
+
+    .footer{
+        padding: 30px 20px 0px 20px;
+    }
+
+    .topFooter{
+        align-items: center;
+        text-align: center;
+    }
+
+    .logoText{
+        width: 100%;
+    }
+
+    .bottomFooter{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .linkFooter{
+        padding-right: 0;
+    }
+
+    .socials{
+        justify-content: center;
+    }
+
+    .copyRight{
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE DEVICES
+========================= */
+@media screen and (max-width: 480px) {
+
+    .footer{
+        padding: 20px 15px 0px 15px;
+    }
+
+    .logoImg{
+        width: 50px;
+        height: auto;
+    }
+
+    .copyRight{
+        font-size: 12px;
+    }
+
+    .socials{
+        gap: 8px;
+    }
+}

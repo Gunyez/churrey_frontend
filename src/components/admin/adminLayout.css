@@ -1,0 +1,17 @@
+.adminLayout {
+  display: flex;
+}
+
+.adminContent {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .adminContent {
+    margin-left: 0;
+    padding: 15px;
+  }
+}

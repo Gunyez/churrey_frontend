@@ -1,0 +1,89 @@
+.footer{
+    background-color: #071833;
+    height: max-content;
+    color: white;
+    /* padding: 50px 100px 0px 90px; */
+    margin: 0;
+}
+
+.topFooter{
+    display: flex;
+    flex-direction: column;
+}
+.logoImg{
+    height: 30px;
+    width: 60px;
+}
+.logoText{
+    width: 35%;
+}
+.bottomFooter{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 0px;
+    /* flex-wrap: wrap; */
+}
+.linkFooter{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    /* padding-right: 20px; */
+}
+.linkTitle{
+    text-decoration: underline;
+}
+li{
+    cursor: pointer;
+    list-style: none;
+}
+hr{
+    margin-top: 20px;
+}
+.copyRight{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.socialsLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socials{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+@media screen and (max-width: 992px) {
+
+    .footer{
+        padding: 40px 50px 0px 50px;
+    }
+
+    .logoText{
+        width: 60%;
+    }
+
+    .bottomFooter{
+        gap: 40px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media screen and (max-width: 768px) {
+.logoText{
+        width: 80%;
+    }
+.bottomFooter{
+    gap: 5px;
+}
+
+}

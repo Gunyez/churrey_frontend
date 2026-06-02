@@ -1,0 +1,154 @@
+.navbar {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.navLeft{
+  justify-content: space-between;
+}
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  
+}
+.logoimg{
+  width: 40px;
+  height: 30px;
+}
+
+/* CENTER LINKS */
+.navCenter {
+  display: flex;
+  gap: 20px;
+}
+
+.navCenter a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.navCenter a:hover {
+  color: gray;
+}
+
+/* RIGHT */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navBtn {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+/* PROFILE */
+.profile {
+  position: relative;
+}
+
+.profileBox {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+.dropdown a,
+.dropdown button {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border: none;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background: #f5f5f5;
+ 
+}
+.logoutBtn{
+  font-weight: bolder;
+  background-color: #ff0000;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .navRight {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    display: none;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    
+  }
+  
+  .navCenter{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .navCenter.active,
+  .navRight.active {
+    display: flex;
+  }
+
+  /* .navCenter a {
+    padding: 10px 0;
+  } */
+
+  .navRight {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,58 @@
+.adminBookings {
+  padding: 20px;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.bookingCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.bookingCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.bookingCard h3,
+.bookingCard p {
+  padding: 0 15px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+}
+
+.actions button {
+  flex: 1;
+  min-width: 100px;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.approveBtn {
+  background: green;
+  color: white;
+}
+
+.cancelBtn {
+  background: orange;
+  color: white;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+}

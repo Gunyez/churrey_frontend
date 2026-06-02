@@ -1,0 +1,74 @@
+.adminHouses {
+  padding: 20px;
+}
+
+.houseForm {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.houseForm input,
+.houseForm textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.houseForm button {
+  padding: 12px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.housesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.houseCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.houseCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.houseCard h3,
+.houseCard p {
+  padding: 0 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+}
+
+.editBtn,
+.deleteBtn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.editBtn {
+  background: #333;
+  color: white;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+}
