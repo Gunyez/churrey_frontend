@@ -7,10 +7,23 @@ const Reviews = ({ houseId }) => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
 
+  // useEffect(() => {
+  //   fetchReviews();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [houseId]);
+
   useEffect(() => {
-    fetchReviews();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [houseId]);
+  const fetchReviews = async () => {
+    try {
+      const res = await api.get(`/reviews/${houseId}`);
+      setReviews(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  fetchReviews();
+}, [houseId]);
 
   const fetchReviews = async () => {
     const res = await api.get(`/reviews/${houseId}`);
