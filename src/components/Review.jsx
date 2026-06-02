@@ -9,6 +9,7 @@ const Reviews = ({ houseId }) => {
 
   useEffect(() => {
     fetchReviews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [houseId]);
 
   const fetchReviews = async () => {
