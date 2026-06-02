@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HouseGrid from "./components/HouseGrid";
+// import HouseGrid from "./components/HouseGrid";
 import HouseDetails from "./pages/HouseDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
