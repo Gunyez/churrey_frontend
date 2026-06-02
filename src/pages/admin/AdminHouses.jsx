@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import api from "../../api/api";
 import "../../styles/adminHouses.css";
-import { AuthContext } from "../../context/AuthContext";
-import { Navigate } from "react-router-dom";
+// import { AuthContext } from "../../context/AuthContext";
+// import { Navigate } from "react-router-dom";
 import AdminLayout from "../../components/admin/AdminLayout";
 
 const Houses = () => {
