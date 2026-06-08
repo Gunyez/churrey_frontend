@@ -3,7 +3,7 @@ import HouseGrid from "./components/HouseGrid";
 import HouseDetails from "./pages/HouseDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Navbar from "./components/Navbar";
+import Navbarr from "./components/Navbarr";
 import Profile from "./pages/Profile";
 import MyBookings from "./pages/MyBookings";
 import Verify from "./pages/Verify";
@@ -19,7 +19,7 @@ import AdminBookings from "./pages/admin/AdminBookings";
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbarr/>
       <Routes>
         <Route path="/admin" element={<Dashboard />} />
         <Route path="/admin/bookings" element={<AdminBookings/>}/>

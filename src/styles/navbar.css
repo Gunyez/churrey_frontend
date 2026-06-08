@@ -20,11 +20,22 @@
   font-weight: bold;
   text-decoration: none;
   color: black;
+  display: flex;
+  flex-direction: column;
   
 }
 .logoimg{
   width: 40px;
   height: 30px;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenu.active {
+  display: flex;
+  flex-direction: column;
 }
 
 /* CENTER LINKS */
@@ -115,7 +126,6 @@
 
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
-
   .hamburger {
     display: block;
   }
@@ -129,26 +139,14 @@
     flex-direction: column;
     display: none;
     padding: 15px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    
   }
-  
-  .navCenter{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-  .navCenter.active,
+
   .navRight.active {
     display: flex;
   }
 
-  /* .navCenter a {
-    padding: 10px 0;
-  } */
-
-  .navRight {
-    gap: 10px;
+  .navCenter {
+    flex-direction: column;
+    gap: 15px;
   }
 }
