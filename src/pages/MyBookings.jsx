@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import api from "../api/api";
+// import { useContext, useEffect, useState } from "react";
+// import api from "../api/api";
 import "../styles/bookings.css";
 // import { AuthContext } from "../context/AuthContext";
 
