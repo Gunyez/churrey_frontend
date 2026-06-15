@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useContext, useEffect, useState } from "react";
 import api from "../api/api";
 import "../styles/bookings.css";
@@ -65,7 +64,6 @@ const MyBookings = () => {
     // </div>
   );
 };
-=======
 // import { useContext, useEffect, useState } from "react";
 // import api from "../api/api";
 // import "../styles/bookings.css";
@@ -129,6 +127,5 @@ const MyBookings = () => {
 //     </div>
 //   );
 // };
->>>>>>> 58341e07e7aff0a6e50df04f0132a82132517ae1
 
-// export default MyBookings;
+export default MyBookings;

@@ -2,12 +2,19 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import api from "../api/api";
+import { AuthContext } from "../context/AuthContext";
+import { useContext } from "react";
 
 const BookingSection = ({ house }) => {
+
+  const {user} = useContext(AuthContext)
+
   const [open, setOpen] = useState(false);
 
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   // Convert unavailable dates
   const disabledDates =
@@ -25,6 +32,21 @@ const BookingSection = ({ house }) => {
 
  const handleBooking = async () => {
 
+  if (!user) {
+    alert("Please login first");
+    return;
+  }
+
+  if (!phoneNumber) {
+    alert("Enter your M-Pesa number");
+    return;
+  }
+
+  if (!startDate || !endDate) {
+    alert("Select booking dates");
+    return;
+  }
+
   try {
 
     // 1️⃣ Create booking first
@@ -34,11 +56,8 @@ const BookingSection = ({ house }) => {
       {
         userId: user._id,
         houseId: house._id,
-        startDate: selectedDates[0],
-        endDate:
-          selectedDates[
-            selectedDates.length - 1
-          ],
+        startDate,
+        endDate,
         totalPrice,
         phone: phoneNumber,
       }
@@ -123,7 +142,7 @@ const BookingSection = ({ house }) => {
         }
       />
 
-      <button onClick={handleMpesaPayment}>
+      <button>
         Pay with M-Pesa
       </button>
 
