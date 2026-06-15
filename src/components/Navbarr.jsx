@@ -12,7 +12,7 @@ import Login from "../pages/Login";
 import { AuthContext } from "../context/AuthContext";
 import api from "../api/api";
 import "../styles/navbarr.css";
-import logo from "../images/Logo.jpg"
+import logo from "../images/logo1.png"
 
 export default function Navbar() {
   const { user, dispatch} = useContext(AuthContext);
@@ -58,10 +58,11 @@ export default function Navbar() {
   return (
     <div className="navbarContainer">
       <header>
-        <Link to="/" style={{ textDecoration: "none", padding: 0, margin: 0 }}>
-          <div className="logo">
+        <Link className="logoLink">
+          
             <img src={logo} alt="Logo" className="logoIcon" />
-          </div>
+            <span className="logoText">Churrey Homes</span>
+        
         </Link>
 
         <ul className={`navbar ${openNavbar ? "active" : ""}`}>
@@ -117,16 +118,20 @@ export default function Navbar() {
 
           ) : (
             <>
-              <button className="userBtn" onClick={handleLogin}>
+            <Link to="/login">
+              <button className="userBtn" >
                 <AccountCircleIcon className="userIcon" />
                 Sign in
               </button>
-              {openLogin && <Login setOpen={setOpenLogin} />}
+            </Link>
+              {/* {openLogin && <Login setOpen={setOpenLogin} />} */}
 
-              <button className="registerBtn" onClick={handleRegister}>
+              <Link to="/register">
+              <button className="registerBtn">
                 Register
               </button>
-              {openRegister && <Register setOpenRegister={setOpenRegister} setOpenLogin={setOpenLogin}/>}
+              </Link>
+              {/* {openRegister && <Register setOpenRegister={setOpenRegister} setOpenLogin={setOpenLogin}/>} */}
             </>
           )}
           <div id="menu-icon" onClick={toggleNavbar}>

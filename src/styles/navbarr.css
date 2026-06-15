@@ -7,42 +7,56 @@
 } */
 
 :root{
-    --bg-color: #222327;
+    --bg-color: #0099ff;
     --text-color: #fff;
-    --main-color: #111c98;
+    --main-color: #0099ff;
 }
 
 .navbarContainer{
-    padding-top: 20px;
+    height: 60px;
 }
 
 header{
     position: fixed;
     width: 100%;
+    height: 40px;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     background: transparent;
-    padding: 28px 12%;
+    /* padding: 0px 12%; */
     transition: all .50s ease;
-    background-color: #0D3166;
+    background-color: #005c99;
+}
+
+a.logoLink{
+    right: 0px;
+    color: red;
+    text-decoration: none;
 }
 
 .logo{
-    display: flex;
-    align-items: center;
+    padding: 0px;
+    /* display: flex; */
+    gap: 5px;
+    
 
 }
 
 .logoIcon{
     height: 30px;
     width: 60px;
-    margin-left: 75px;
+    margin-left:25px;
 }
+span.logoText{
+    color: white;
+   font-weight: bold;
+   font-size: 2.5em;
 
+}
 .logo span{
     color: var(--text-color);
     font-size: 1.3rem;
@@ -89,14 +103,15 @@ header{
 }
 
 
-/* .main a{
-    margin-right: 25px;
+.main a{
+    /* margin-right: 25px;
     margin-left: 10px;
     color: var(--text-color);
     font-size: 1.1rem;
     font-weight: 500;
-    transition: all .50s ease;
-} */
+    transition: all .50s ease; */
+    text-decoration: none;
+}
 
 /* .user{
     display: flex;
@@ -123,6 +138,7 @@ header{
     z-index: 10001;
     display: none;
 }
+
 
 /* General button styles */
 /* button, */
@@ -163,6 +179,8 @@ header{
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     align-items: center;
+    text-decoration: none;
+    
 }
 
 /* Hover effect */
@@ -255,11 +273,11 @@ header{
 
    .navbar.active{
     position: absolute;
-    top: 100%;
+    top: 70%;
     right: 0;
-    width: 270px;
+    width: 100%;
     height: max-content;
-    background: #0D3166;
+    background: #0099ff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -268,7 +286,7 @@ header{
    }
    .navbar a{
     display: block;
-    margin: 12px 0;
+    /* margin: 12px 0; */
     padding: 0px 25px;
     transition: all .50s ease;
     
@@ -281,6 +299,24 @@ header{
    }
    .navbar a.active{
     color: var(--text-color);
+   }
+   .logo{
+    display: flex;
+    align-items: center;
+   }
+   img.logoIcon{
+    left: 0px
+   }
+
+   span.logoText{
+    font-weight: bold;
+    font-size: medium;
+    display: none;
+   }
+
+   .userBtn{
+    font-weight: 400;
+    font-size: small;
    }
 
 }

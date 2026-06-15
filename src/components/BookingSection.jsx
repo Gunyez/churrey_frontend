@@ -23,21 +23,68 @@ const BookingSection = ({ house }) => {
 
   const totalPrice = getDays() * house.price;
 
-  const handleBooking = async () => {
-    try {
-      await api.post("/bookings", {
-        houseId: house._id,
-        startDate,
-        endDate,
-        totalPrice,
-      });
+ const handleBooking = async () => {
 
-      alert("Booking successful!");
-    } catch (err) {
-      console.log(err);
-      alert("Booking failed");
-    }
-  };
+  try {
+
+    // 1️⃣ Create booking first
+
+    const bookingRes = await api.post(
+      "/bookings",
+      {
+        userId: user._id,
+        houseId: house._id,
+        startDate: selectedDates[0],
+        endDate:
+          selectedDates[
+            selectedDates.length - 1
+          ],
+        totalPrice,
+        phone: phoneNumber,
+      }
+    );
+
+    const booking = bookingRes.data;
+
+    // 2️⃣ Initiate payment
+
+    await api.post("/mpesa/pay", {
+      bookingId: booking._id,
+      phone: phoneNumber,
+      amount: totalPrice,
+    });
+
+    alert(
+      "Booking created. Complete payment on phone."
+    );
+
+  } catch (err) {
+
+    console.log(err);
+
+    alert("Booking failed");
+  }
+};
+
+//   const handleMpesaPayment = async () => {
+
+//   try {
+
+//     await api.post("/mpesa/pay", {
+//       bookingId: booking._id,
+//       phone: phoneNumber,
+//       amount: booking.totalPrice,
+//     });
+
+//     alert("STK Push sent");
+
+//   } catch (err) {
+
+//     console.log(err);
+
+//     alert("Payment failed");
+//   }
+// };
 
   return (
     <div className="bookingCard">
@@ -67,6 +114,19 @@ const BookingSection = ({ house }) => {
       )}
 
       <p>Total: <strong>KES {totalPrice}</strong></p>
+      <input
+        type="text"
+        placeholder="2547XXXXXXXX"
+        value={phoneNumber}
+        onChange={(e) =>
+          setPhoneNumber(e.target.value)
+        }
+      />
+
+      <button onClick={handleMpesaPayment}>
+        Pay with M-Pesa
+      </button>
+
 
       <button className="bookBtn" onClick={handleBooking}>
         Book Now
