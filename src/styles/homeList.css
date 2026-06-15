@@ -1,0 +1,93 @@
+.homesPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.homesHeader {
+  margin-bottom: 25px;
+}
+
+.homesHeader h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.homesHeader p {
+  color: #777;
+}
+
+.homesList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.homeCard {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.homeCard:hover {
+  transform: translateY(-3px);
+}
+
+.homeImage {
+  width: 140px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.homeInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.homeInfo h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.location {
+  color: #666;
+  font-size: 14px;
+}
+
+.homeMeta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.homeBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating {
+  color: #f5a623;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #00a86b;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 50px;
+}

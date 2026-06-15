@@ -13,7 +13,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/admin/Dashboard";
 import AdminHouses from "./pages/admin/AdminHouses";
 import AdminBookings from "./pages/admin/AdminBookings";
-
+import HomeList from "./pages/HomeList"
 
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/bookings" element={<MyBookings />} />
         <Route path="/" element={<Home />} />
+        <Route path="/homeList" element={<HomeList />} />
         <Route path="/house/:id" element={<HouseDetails />} />
       </Routes>
     </Router>

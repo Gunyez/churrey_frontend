@@ -1,8 +1,14 @@
 // HeroSection.jsx
 import React from "react";
 import "../styles/heroSection.css";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleExplore = () => {
+    navigate("/homeList");
+  };
   return (
     <section className="hero">
       <div className="hero-content">
@@ -17,7 +23,7 @@ const HeroSection = () => {
           </p>
 
           <div className="search-bar">
-            <button>Explore</button>
+            <button onClick={handleExplore}>Explore</button>
           </div>
         </div>
       </div>
