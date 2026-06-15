@@ -1,14 +1,9 @@
-
-import CameraIndoorIcon from "@mui/icons-material/CameraIndoor";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import CancelIcon from "@mui/icons-material/Cancel";
 import LogoutIcon from '@mui/icons-material/Logout';
-import LoginIcon from '@mui/icons-material/Login';
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import Register from "../pages/Register";
-import Login from "../pages/Login";
 import { AuthContext } from "../context/AuthContext";
 import api from "../api/api";
 import "../styles/navbarr.css";
@@ -20,8 +15,6 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const [openNavbar, setOpenNavbar] = useState(false);
-  const [openRegister, setOpenRegister] = useState(false);
-  const [openLogin, setOpenLogin] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
 
 
@@ -32,16 +25,16 @@ export default function Navbar() {
   };
 
   // HANDLE REGISTER CLICK
-  const handleRegister = () => {
-    setOpenRegister((prev) => !prev);
-    setOpenLogin(false);
-  };
+  // const handleRegister = () => {
+  //   setOpenRegister((prev) => !prev);
+  //   setOpenLogin(false);
+  // };
 
   // HANDLE LOGIN CLICK
-  const handleLogin = () => {
-    setOpenLogin((prev) => !prev);
-    setOpenRegister(false);
-  };
+  // const handleLogin = () => {
+  //   setOpenLogin((prev) => !prev);
+  //   setOpenRegister(false);
+  // };
   //HANDLE LOGOUT
     const handleLogout = async () => {
 
