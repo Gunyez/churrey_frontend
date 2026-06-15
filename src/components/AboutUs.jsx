@@ -9,7 +9,7 @@ function AboutUs() {
     <div className="section">
         <div className="top">
             
-            <img src={bg1} className="img"/>
+            <img src={bg1} alt = "background" className="img"/>
             
     
             <h2>

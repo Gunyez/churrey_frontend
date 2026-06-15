@@ -30,8 +30,12 @@ const Navbar = () => {
       {/* LEFT LOGO */}
       <div className="navLeft">
         <Link to="/" className="logo">
+<<<<<<< HEAD
           <img  className = "logoimg"src={ logo} alt="ChurreyHomes Logo"/>
           <div>Churrey Homes</div>
+=======
+          <img  className = "logoimg"src={ logo} alt="logo"/> Churrey Homes
+>>>>>>> 58341e07e7aff0a6e50df04f0132a82132517ae1
         </Link>
       </div>
 
