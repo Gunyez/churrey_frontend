@@ -4,8 +4,6 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 function AboutUs() {
   return (
-    <section>
-
     <div className="section">
         <div className="top">
             
@@ -51,10 +49,6 @@ function AboutUs() {
         </div>
             
         </div>
-
-  
-
-</section>
   )
 }
 

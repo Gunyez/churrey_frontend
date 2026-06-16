@@ -1,79 +1,123 @@
-import "../styles/footer.css"
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  LinkedIn,
+  LocationOn,
+  Phone,
+  Email,
+  Send,
+} from "@mui/icons-material";
+import logo from "../images/logo1.png"
 
-import logo from '../images/logo1.png'
-import XIcon from '@mui/icons-material/X';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 
+import "../styles/footer.css";
 
-function Footer() {
-  const year = new Date().getFullYear()  
-  
+const Footer = () => {
   return (
-    <div className="footer">
-        <div className="topFooter">
-            <div className="logo">
-              <img src={logo} alt="" className="logoImg"/>
-            </div>
-            <div className="logoText">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                Minus ipsa magni nam aliquid cum atque nemo delectus
-                nostrum corporis perspiciatis, 
-                voluptas impedit veniam ad officia tenetur 
-                expedita ex dolor voluptates.
-              </p>
-            </div>
-        </div>
-        <div className="bottomFooter">
-           <ul className="linkFooter">
-            <div className="linkTitle">
-              Quick Link
-            </div>
-            <li>
-              Home
-            </li>
-            <li>
-              About Us
-            </li>
-            <li>
-              Our Homes
-            </li>
-            <li>
-              Contact
-            </li>
-           </ul>
-           <ul className="linkFooter">
-           <div className="linkTitle">
-              Get In Touch
-            </div>
-            <li className="socialsLink">
-              <EmailIcon/> churreyexperts@gmail.com
-            </li>
-            <li className="socialsLink">
-              <LocationOnIcon/>2198 Diani, South Coast 
-            </li>
-            <ul className="socials">
-              <li>
-                <XIcon/>
-              </li>
-              <li>
-                <FacebookIcon/>
-              </li>
-              <li>
-                <InstagramIcon/>
-              </li>
-            </ul>
-           </ul>
-        </div>
-        <hr />
-        <div className="copyRight">
-            &copy; Churrey Homes {year}
-        </div>
-    </div>
-  )
-}
+    <footer className="footer">
 
-export default Footer
+      <div className="footerTop">
+
+        <div className="footerLogo">
+          <img src={logo} alt="Logo" className="logoIcon" />
+          <h2>Churrey Homes</h2>
+
+          <div className="socialIcons">
+            <Facebook />
+            <Twitter />
+            <Instagram />
+            <LinkedIn />
+          </div>
+        </div>
+
+      </div>
+
+      <div className="footerContent">
+
+        <div className="footerSection">
+          <h3>About Us</h3>
+
+          <p>
+            Churrey Homes helps travelers
+            discover and book beautiful homes
+            across Kenya with secure online
+            payments and instant confirmations.
+          </p>
+
+          <div className="contactItem">
+            <LocationOn />
+            <span>Nairobi, Kenya</span>
+          </div>
+
+          <div className="contactItem">
+            <Phone />
+            <span>+254 722 477 920</span>
+          </div>
+
+          <div className="contactItem">
+            <Email />
+            <span>info@churreyhomes.com</span>
+          </div>
+        </div>
+
+        <div className="footerSection">
+          <h3>Explore</h3>
+
+          <a href="/">Home</a>
+          <a href="/houses">Browse Homes</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
+        </div>
+
+        <div className="footerSection">
+          <h3>Quick Links</h3>
+
+          <a href="/bookings">My Bookings</a>
+          <a href="/favorites">Saved Homes</a>
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        </div>
+
+        <div className="footerSection">
+          <h3>Newsletter</h3>
+
+          <p>
+            Get new homes and exclusive
+            offers delivered to your inbox.
+          </p>
+
+          <div className="newsletter">
+            <input
+              type="email"
+              placeholder="Enter your email"
+            />
+
+            <button>
+              <Send />
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="footerBottom">
+
+        <p>
+          © {new Date().getFullYear()}
+          Churrey Homes. All rights reserved.
+        </p>
+
+        <div className="footerPolicies">
+          <span>Terms</span>
+          <span>Privacy</span>
+          <span>Cookies</span>
+        </div>
+
+      </div>
+
+    </footer>
+  );
+};
+
+export default Footer;

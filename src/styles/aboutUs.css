@@ -51,8 +51,8 @@ h2{
 /* Mobile (up to 768px) */
 @media (max-width: 768px) {
   .section {
-    margin: 20px auto;
-    padding: 0 15px;
+    /* margin: 20px auto;
+    padding: 0 15px; */
   }
 
   .top {
@@ -109,7 +109,7 @@ h2{
 /* Large screens (above 1024px) */
 @media (min-width: 1025px) {
   .section {
-    margin-left: 90px;
+    /* margin-left: 90px; */
   }
 
   .img {

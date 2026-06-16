@@ -14,6 +14,8 @@
 
 .navbarContainer{
     height: 60px;
+    margin: 0;
+    padding: 0;
 }
 
 header{

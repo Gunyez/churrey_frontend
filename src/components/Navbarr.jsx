@@ -49,7 +49,6 @@ export default function Navbar() {
       }
     };
   return (
-    <div className="navbarContainer">
       <header>
         <Link className="logoLink">
           
@@ -132,6 +131,5 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-    </div>
   );
 }
