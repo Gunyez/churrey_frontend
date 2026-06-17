@@ -24,6 +24,7 @@ const Register = () => {
 
     try {
       await api.post("/auth/register", data);
+      alert("Check your email for verification link")
       navigate("/login");
     } catch (err) {
       alert(err.response?.data);
@@ -57,6 +58,13 @@ const Register = () => {
         />
 
         <button onClick={handleClick}>Register</button>
+        {error && (
+          <p className="error">
+            {typeof error === "string"
+              ? error
+              : error?.message || "Something went wrong"}
+          </p>
+        )}
 
         <p>
           Already have an account? <Link to="/login">Login</Link>
