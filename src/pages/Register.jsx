@@ -10,6 +10,8 @@ const Register = () => {
     password: "",
   });
 
+  const { dispatch, loading, error } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
