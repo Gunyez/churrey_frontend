@@ -59,7 +59,9 @@ const Register = () => {
           onChange={handleChange}
         />
 
-        <button onClick={handleClick}>Register</button>
+        <button onClick={handleClick} disabled={loading}>
+          {loading ? "Registering ..." : "Register"}
+        </button>
         {error && (
           <p className="error">
             {typeof error === "string"
