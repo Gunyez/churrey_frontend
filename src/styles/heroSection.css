@@ -87,6 +87,12 @@
 .hero-text {
   max-width: 600px;
 }
+.hero-text p {
+  max-width: 400px;
+  font-weight: 600;
+}
+
+
 
 
 

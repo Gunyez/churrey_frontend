@@ -20,14 +20,18 @@ const Footer = () => {
       <div className="footerTop">
 
         <div className="footerLogo">
-          <img src={logo} alt="Logo" className="logoIcon" />
-          <h2>Churrey Homes</h2>
-
-          <div className="socialIcons">
-            <Facebook />
-            <Twitter />
-            <Instagram />
-            <LinkedIn />
+          <div className="footerLeft">
+            <img src={logo} alt="Logo" className="logoIcon" />
+            <span className="footerLogoText">Churrey Homes</span>
+          </div>
+          
+          <div className="footerRight">
+            <div className="socialIcons">
+              <Facebook />
+              <Twitter />
+              <Instagram />
+              <LinkedIn />
+            </div>
           </div>
         </div>
 

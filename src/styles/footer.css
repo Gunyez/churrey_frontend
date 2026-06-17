@@ -1,14 +1,14 @@
 .footer {
   background: linear-gradient(
-      rgba(49, 113, 232, 0.95),
-      rgba(255, 255, 255, 0.95)
+      rgba(24, 78, 177, 0.95),
+      rgba(0, 0, 0, 0.95)
     ),
     url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85");
 
   background-size: cover;
   background-position: center;
 
-  color: black;
+  color: #ffffff;
 
   padding: 60px 8% 20px;
   margin-top: 80px;
@@ -17,9 +17,17 @@
 .footerTop {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgb(255, 255, 255);
   padding-bottom: 25px;
   margin-bottom: 40px;
+}
+.footerLeft{
+  gap: 10px;
+}
+
+.footerLogoText{
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .footerLogo {
@@ -68,19 +76,19 @@
 
 .footerSection p {
   line-height: 1.8;
-  color: black;
+  color: #ffffff;
 }
 
 .footerSection a {
   display: block;
-  color: black;
+  color: #ffffff;
   text-decoration: none;
   margin-bottom: 12px;
   transition: .3s;
 }
 
 .footerSection a:hover {
-  color: black;
+  color: #ffffff;
   padding-left: 5px;
 }
 
@@ -94,33 +102,33 @@
 .newsletter {
   display: flex;
   margin-top: 20px;
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .newsletter input {
   flex: 1;
   background: transparent;
   border: none;
-  color: black;
+  color: #ffffff;
   padding: 12px 0;
   outline: none;
 }
 
 .newsletter input::placeholder {
-  color: black;
+  color: #ffffff;
 }
 
 .newsletter button {
   background: transparent;
   border: none;
-  color: black;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .footerBottom {
   margin-top: 50px;
   padding-top: 25px;
-  border-top: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgb(255, 255, 255);
 
   display: flex;
   justify-content: space-between;
@@ -134,7 +142,7 @@
 
 .footerPolicies span {
   cursor: pointer;
-  color: black;
+  color: #ffffff;
 }
 
 @media (max-width: 992px) {
@@ -148,8 +156,11 @@
 @media (max-width: 768px) {
 
   .footerLogo {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 20px;
+  }
+  .footerLogoText{
+    display: none;
   }
 
   .footerContent {
